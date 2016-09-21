@@ -19,8 +19,13 @@
     <script type="text/javascript">
         var app = angular.module("animeApp", ['ui.grid', 'ui.grid.pagination']);
         app.controller("animeCtrl", function ($scope) {
+  //          var paginationOptions = {
+  //    pageNumber: 1,
+  //    pageSize: 4
+  //  };
             $scope.animeSeriesGrid = {
-                totalItems: 67,
+                totalItems: 100,
+                useExternalPagination: true,
                 enableSorting: true,
                 paginationPageSizes: [5, 10],
                 paginationPageSize: 4,
@@ -96,24 +101,24 @@
 
                     //will be called on click of a page
                     gridApi.pagination.on.paginationChanged($scope, function (newPage, pageSize) {
-                        console.log('clicked on the page');
-                        var clickedPageNumber = newPage;
-                        console.log('pageSize :', pageSize);
+                      // paginationOptions.pageNumber = newPage;
+                      // paginationOptions.pageSize = pageSize;
+                        //console.log('clicked on the page');
+                        var clickedPageNumber = paginationOptions.pageNumber;
+                        //console.log('pageSize :', pageSize);
                         $scope.getPageData(clickedPageNumber);
                     });
                 }
             };
             $scope.getPageData = function (pageNumber) {
-                console.log('clicked page number ########### :', pageNumber);
-                console.log('$scope.animeSeriesGrid.totalItems before:', $scope.animeSeriesGrid.totalItems);
+                //console.log('clicked page number ########### :', pageNumber);
+                //console.log('$scope.animeSeriesGrid.totalItems before:', $scope.animeSeriesGrid.totalItems);
                 $scope.animeSeriesGrid.totalItems = 100;
-                console.log('$scope.animeSeriesGrid.totalItems after :', $scope.animeSeriesGrid.totalItems);
+                //console.log('$scope.animeSeriesGrid.totalItems after :', $scope.animeSeriesGrid.totalItems);
             };
-            setTimeout(function () {
-                $scope.$apply(function () {
-                    $scope.animeSeriesGrid.totalItems = 100;
-                }, 1000);
-            });
+            //  setTimeout(function () {
+            //          $scope.animeSeriesGrid.totalItems = 100;
+            //  });
         });
     </script>
 </head>
@@ -121,7 +126,7 @@
 <body ng-app="animeApp">
 <h2>ANIME</h2>
 <div ng-controller="animeCtrl">
-    <div ui-grid="animeSeriesGrid" ui-grid-pagination=true class="animeGrid"></div>
+    <div ui-grid="animeSeriesGrid" ui-grid-pagination class="animeGrid"></div>
 </div>
 </body>
 
