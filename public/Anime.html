@@ -19,14 +19,13 @@
     <script type="text/javascript">
         var app = angular.module("animeApp", ['ui.grid', 'ui.grid.pagination']);
         app.controller("animeCtrl", function ($scope) {
-  //          var paginationOptions = {
-  //    pageNumber: 1,
-  //    pageSize: 4
-  //  };
+           var paginationOptions = {
+                pageNumber: 1,
+                pageSize: 4
+           };
             $scope.animeSeriesGrid = {
-                totalItems: 100,
+                totalItems: 8,
                 useExternalPagination: true,
-                enableSorting: true,
                 paginationPageSizes: [5, 10],
                 paginationPageSize: 4,
                 rowHeight: 150,
@@ -39,71 +38,30 @@
                     cellTemplate: "<img width=\"200px\" ng-src=\"{{grid.getCellValue(row, col)}}\" lazy-src>"
                 }],
                 data: [{
-                    "series": "Cowboy Bebop",
+                    "series": "Cowboy Bebop 1",
                     "character": "Spike",
                     "pic": "http://cdn.paper4pc.com/images/cowboy-bebop-spike-spiegel-wallpaper-2.jpg"
                 }, {
-                    "series": "Cowboy Bebop",
+                    "series": "Cowboy Bebop 2",
                     "character": "Spike",
                     "pic": "http://cdn.paper4pc.com/images/cowboy-bebop-spike-spiegel-wallpaper-2.jpg"
                 }, {
-                    "series": "Cowboy Bebop",
+                    "series": "Cowboy Bebop 3",
                     "character": "Spike",
                     "pic": "http://cdn.paper4pc.com/images/cowboy-bebop-spike-spiegel-wallpaper-2.jpg"
                 }, {
-                    "series": "Cowboy Bebop",
-                    "character": "Spike",
-                    "pic": "http://cdn.paper4pc.com/images/cowboy-bebop-spike-spiegel-wallpaper-2.jpg"
-                }, {
-                    "series": "Cowboy Bebop",
-                    "character": "Spike",
-                    "pic": "http://cdn.paper4pc.com/images/cowboy-bebop-spike-spiegel-wallpaper-2.jpg"
-                }, {
-                    "series": "Cowboy Bebop",
-                    "character": "Spike",
-                    "pic": "http://cdn.paper4pc.com/images/cowboy-bebop-spike-spiegel-wallpaper-2.jpg"
-                }, {
-                    "series": "Cowboy Bebop",
-                    "character": "Spike",
-                    "pic": "http://cdn.paper4pc.com/images/cowboy-bebop-spike-spiegel-wallpaper-2.jpg"
-                }, {
-                    "series": "Cowboy Bebop",
-                    "character": "Spike",
-                    "pic": "http://cdn.paper4pc.com/images/cowboy-bebop-spike-spiegel-wallpaper-2.jpg"
-                }, {
-                    "series": "Cowboy Bebop",
-                    "character": "Spike",
-                    "pic": "http://cdn.paper4pc.com/images/cowboy-bebop-spike-spiegel-wallpaper-2.jpg"
-                }, {
-                    "series": "Cowboy Bebop",
-                    "character": "Spike",
-                    "pic": "http://cdn.paper4pc.com/images/cowboy-bebop-spike-spiegel-wallpaper-2.jpg"
-                }, {
-                    "series": "Cowboy Bebop",
-                    "character": "Spike",
-                    "pic": "http://cdn.paper4pc.com/images/cowboy-bebop-spike-spiegel-wallpaper-2.jpg"
-                }, {
-                    "series": "Cowboy Bebop",
-                    "character": "Spike",
-                    "pic": "http://cdn.paper4pc.com/images/cowboy-bebop-spike-spiegel-wallpaper-2.jpg"
-                }, {
-                    "series": "Cowboy Bebop",
-                    "character": "Spike",
-                    "pic": "http://cdn.paper4pc.com/images/cowboy-bebop-spike-spiegel-wallpaper-2.jpg"
-                }, {
-                    "series": "Cowboy Bebop",
+                    "series": "Cowboy Bebop 4",
                     "character": "Spike",
                     "pic": "http://cdn.paper4pc.com/images/cowboy-bebop-spike-spiegel-wallpaper-2.jpg"
                 }]
                 ,
                 onRegisterApi: function (gridApi) {
                     $scope.gridApi = gridApi;
-
                     //will be called on click of a page
                     gridApi.pagination.on.paginationChanged($scope, function (newPage, pageSize) {
-                      // paginationOptions.pageNumber = newPage;
-                      // paginationOptions.pageSize = pageSize;
-                        //console.log('clicked on the page');
+                         paginationOptions.pageNumber = newPage;
+                         paginationOptions.pageSize = pageSize;
+                         console.log('clicked on the page');
                         var clickedPageNumber = paginationOptions.pageNumber;
                         //console.log('pageSize :', pageSize);
                         $scope.getPageData(clickedPageNumber);
@@ -111,14 +69,27 @@
                 }
             };
             $scope.getPageData = function (pageNumber) {
-                //console.log('clicked page number ########### :', pageNumber);
-                //console.log('$scope.animeSeriesGrid.totalItems before:', $scope.animeSeriesGrid.totalItems);
-                $scope.animeSeriesGrid.totalItems = 100;
-                //console.log('$scope.animeSeriesGrid.totalItems after :', $scope.animeSeriesGrid.totalItems);
+                console.log('clicked page number ########### :', pageNumber);
+                console.log('$scope.animeSeriesGrid.totalItems before:', $scope.animeSeriesGrid.totalItems);
+                //$scope.animeSeriesGrid.totalItems = 100;
+                $scope.animeSeriesGrid.data =  [ {
+                     "series": "Cowboy Bebop 8",
+                     "character": "Spike",
+                     "pic": "http://static.rogerebert.com/uploads/movie/movie_poster/dont-breathe-2016/large_dont_breathe.jpg"
+                 }, {
+                     "series": "Cowboy Bebop 9",
+                     "character": "Spike",
+                     "pic": "http://cdn.paper4pc.com/images/cowboy-bebop-spike-spiegel-wallpaper-2.jpg"
+                 }, {
+                     "series": "Cowboy Bebop 10",
+                     "character": "Spike",
+                     "pic": "http://cdn.paper4pc.com/images/cowboy-bebop-spike-spiegel-wallpaper-2.jpg"
+                 }, {
+                     "series": "Cowboy Bebop 11",
+                     "character": "Spike",
+                     "pic": "http://cdn.paper4pc.com/images/cowboy-bebop-spike-spiegel-wallpaper-2.jpg"
+                 }];
             };
-            //  setTimeout(function () {
-            //          $scope.animeSeriesGrid.totalItems = 100;
-            //  });
         });
     </script>
 </head>

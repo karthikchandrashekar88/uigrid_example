@@ -7,6 +7,7 @@ app.get('/anime', function (req, res) {
   res.sendFile( __dirname + "/public/" + "Anime.html" );
 });
 
+
 app.get('/process_get', function (req, res) {
 
   // Prepare output in JSON format
