@@ -1,69 +1,130 @@
 var express = require('express');
 var app = express();
+var bodyParser = require('body-parser');
 
 //app.use(express.static('public'));
 app.use(express.static(__dirname + "/public"));
+app.use(bodyParser());
 
-// app.get('/anime', function (req, res) {
-//   res.sendFile( __dirname + "/public/" + "Anime.html");
-// });
+var data1 = [{
+  "id": "1",
+  "series": "Cowboy Bebop",
+  "character": "Spike",
+  "pic": "http://cdn.paper4pc.com/images/cowboy-bebop-spike-spiegel-wallpaper-2.jpg"
+}, {
+  "id": "2",
+  "series": "Ghost In The Shell",
+  "character": "motoko",
+  "pic": "http://www.theactionpixel.com/wp-content/uploads/2015/10/gitsthenewmovie_3.jpg"
+}, {
+  "id": "3",
+  "series": "Elfen Lied",
+  "character": "lucy",
+  "pic": "http://vignette3.wikia.nocookie.net/villains/images/3/31/Elfen_Lied_Lucy_by_D_jien.jpg/revision/latest?cb=20130726052703"
+}, {
+  "id": "4",
+  "series": "Full Metal Alchemist Brotherhood",
+  "character": "alphonse",
+  "pic": "http://www.gstatic.com/tv/thumb/tvbanners/9065115/p9065115_b_v8_aa.jpg"
+}, {
+  "id": "5",
+  "series": "Monokie Hime",
+  "character": "monokie",
+  "pic": "http://hivewallpaper.com/wallpaper/2014/11/mononoke-hime-anime-21-desktop-background.jpg"
+}, {
+  "id": "6",
+  "series": "Grave Of The Fire Flies",
+  "character": "Seta",
+  "pic": "http://t0.gstatic.com/images?q=tbn:ANd9GcRMNDBwPmSBW9t9IyC9Xh7Izu_gzmz9_pjalzUcF-tUhmACDPR3"
+}, {
+  "id": "7",
+  "series": "Spirited Away",
+  "character": "z",
+  "pic": "http://t1.gstatic.com/images?q=tbn:ANd9GcS6MveoDoJOg9-wMvtHE4ak_-HDZeYS1egb9PwRcf8lhrtcppMc"
+}, {
+  "id": "8",
+  "series": "Ghost In The Shell SIC",
+  "character": "Hideo Kuze",
+  "pic": "http://4.bp.blogspot.com/-eXMATdehSdY/UCybsOll1BI/AAAAAAAAAGA/QS8Yh80lu6c/s1600/hideokuze_com_008.jpg"
+}, {
+  "id": "9",
+  "series": "The wind rises",
+  "character": "jiro",
+  "pic": "https://upload.wikimedia.org/wikipedia/en/a/a3/Kaze_Tachinu_poster.jpg"
+}, {
+  "id": "10",
+  "series": "Porco Rosso",
+  "character": "Proco",
+  "pic": "https://upload.wikimedia.org/wikipedia/en/d/d9/Porco_rosso.jpg"
+}, {
+  "id": "11",
+  "series": "nausicaa",
+  "character": "nausicaa",
+  "pic": "https://upload.wikimedia.org/wikipedia/en/b/bc/Nausicaaposter.jpg"
+}, {
+  "id": "12",
+  "series": "The Girl Who Leapt Through Time",
+  "character": "The Girl Who Leapt Through Time",
+  "pic": "https://upload.wikimedia.org/wikipedia/en/4/4e/The_Girl_Who_Leapt_Through_Time_poster.jpg"
+}, {
+  "id": "13",
+  "series": "Ninja Scroll",
+  "character": "Ninja Scroll",
+  "pic": "http://vignette1.wikia.nocookie.net/ninjascroll/images/3/39/Ninja_Scroll_-_Kagero.jpg/revision/latest?cb=20150723194608"
+}, {
+  "id": "14",
+  "series": "The Castle of Cagliostro",
+  "character": "The Castle of Cagliostro",
+  "pic": "http://vignette1.wikia.nocookie.net/lupin/images/4/44/Castle-cagliostro-poster.jpg/revision/latest?cb=20151113031340"
+}, {
+  "id": "15",
+  "series": "Blood: The Last Vampire",
+  "character": "Blood: The Last Vampire",
+  "pic": "http://www.filmtakeout.com/wp-content/uploads/2016/02/blood-the-last-vampire-1.jpg"
+}, {
+  "id": "16",
+  "series": "Vampire Hunter D: Bloodlust",
+  "character": "Vampire Hunter D: Bloodlust",
+  "pic": "https://upload.wikimedia.org/wikipedia/en/4/4b/Vampire-hunter-d-poster.jpg"
+}, {
+  "id": "17",
+  "series": "Wolf Children",
+  "character": "Wolf Children",
+  "pic": "http://t1.gstatic.com/images?q=tbn:ANd9GcRt65AEv8UJCdkb-0is1yAbGHuXZf1MD4NMgbHyilKcyd15P1Tz"
+}, {
+  "id": "18",
+  "series": "Howl's Moving Castle",
+  "character": "Howl's Moving Castle",
+  "pic": "https://img.buzzfeed.com/buzzfeed-static/static/2015-07/15/17/enhanced/webdr13/edit-31132-1436995248-5.jpg"
+}];
 
-app.get('/animeData1', function (req, res) {
-  console.log("function1 invoked!!!!!");
-   var data1= [{
-       "series": "Cowboy Bebop 1",
-       "character": "Spike",
-       "pic": "http://cdn.paper4pc.com/images/cowboy-bebop-spike-spiegel-wallpaper-2.jpg"
-   }, {
-       "series": "Cowboy Bebop 2",
-       "character": "Spike",
-       "pic": "http://static.rogerebert.com/uploads/movie/movie_poster/dont-breathe-2016/large_dont_breathe.jpg"
-   }, {
-       "series": "Cowboy Bebop 3",
-       "character": "Spike",
-       "pic": "http://cdn.paper4pc.com/images/cowboy-bebop-spike-spiegel-wallpaper-3.jpg"
-   }, {
-       "series": "Cowboy Bebop 4",
-       "character": "Spike",
-       "pic": "http://cdn.paper4pc.com/images/cowboy-bebop-spike-spiegel-wallpaper-1.jpg"
-   }]
+
+app.get('/anime', function (req, res) {
+  res.sendFile(__dirname + "/public/" + "Anime.html");
+});
+
+app.get('/animeDataSize', function (req, res) {
   res.send(data1);
 });
 
-app.get('/animeData2', function (req, res) {
-  console.log("function2 invoked....");
-  var data2 =  [{
-       "series": "Cowboy Bebop 8",
-       "character": "Spike",
-       "pic": "http://static.rogerebert.com/uploads/movie/movie_poster/dont-breathe-2016/large_dont_breathe.jpg"
-   }, {
-       "series": "Cowboy Bebop 9",
-       "character": "Spike",
-       "pic": "http://cdn.paper4pc.com/images/cowboy-bebop-spike-spiegel-wallpaper-2.jpg"
-   }, {
-       "series": "Cowboy Bebop 10",
-       "character": "Spike",
-       "pic": "http://cdn.paper4pc.com/images/cowboy-bebop-spike-spiegel-wallpaper-1.jpg"
-   }, {
-       "series": "Cowboy Bebop 11",
-       "character": "Spike",
-       "pic": "http://cdn.paper4pc.com/images/cowboy-bebop-spike-spiegel-wallpaper-2.jpg"
-   }];
-  res.send(data2);
+app.get('/animeData', function (req, res) {
+  var response = [];
+  var pageNumber = req.param('pageNumber');
+  if(pageNumber === undefined){
+    pageNumber =1;
+  }
+  var b = parseInt(pageNumber) * 4;
+  var a = b - 4;
+  for (var i = a; i <= b; i++) {
+    if (i === data1.length) {
+      break;
+    }
+    response.push(data1[i]);
+  }
+  res.send(response);
 });
 
-app.get('/process_get', function (req, res) {
-
-  // Prepare output in JSON format
-  response = {
-    first_name:'karthik',
-    last_name:'c'
-  };
-  console.log(response);
-  res.end(JSON.stringify(response));
-});
-
-var server = app.listen(8081, function () {
+var server = app.listen(8083, function () {
 
   var host = server.address().address;
   var port = server.address().port;
