@@ -96,6 +96,261 @@ var data1 = [{
   "series": "Howl's Moving Castle",
   "character": "Howl's Moving Castle",
   "pic": "https://img.buzzfeed.com/buzzfeed-static/static/2015-07/15/17/enhanced/webdr13/edit-31132-1436995248-5.jpg"
+}, {
+  "id": "19",
+  "series": "Ghost In The Shell",
+  "character": "motoko",
+  "pic": "http://www.theactionpixel.com/wp-content/uploads/2015/10/gitsthenewmovie_3.jpg"
+}, {
+  "id": "20",
+  "series": "Elfen Lied",
+  "character": "lucy",
+  "pic": "http://vignette3.wikia.nocookie.net/villains/images/3/31/Elfen_Lied_Lucy_by_D_jien.jpg/revision/latest?cb=20130726052703"
+}, {
+  "id": "21",
+  "series": "Full Metal Alchemist Brotherhood",
+  "character": "alphonse",
+  "pic": "http://www.gstatic.com/tv/thumb/tvbanners/9065115/p9065115_b_v8_aa.jpg"
+}, {
+  "id": "22",
+  "series": "Monokie Hime",
+  "character": "monokie",
+  "pic": "http://hivewallpaper.com/wallpaper/2014/11/mononoke-hime-anime-21-desktop-background.jpg"
+}, {
+  "id": "23",
+  "series": "Grave Of The Fire Flies",
+  "character": "Seta",
+  "pic": "http://t0.gstatic.com/images?q=tbn:ANd9GcRMNDBwPmSBW9t9IyC9Xh7Izu_gzmz9_pjalzUcF-tUhmACDPR3"
+}, {
+  "id": "24",
+  "series": "Spirited Away",
+  "character": "z",
+  "pic": "http://t1.gstatic.com/images?q=tbn:ANd9GcS6MveoDoJOg9-wMvtHE4ak_-HDZeYS1egb9PwRcf8lhrtcppMc"
+}, {
+  "id": "25",
+  "series": "Ghost In The Shell SIC",
+  "character": "Hideo Kuze",
+  "pic": "http://4.bp.blogspot.com/-eXMATdehSdY/UCybsOll1BI/AAAAAAAAAGA/QS8Yh80lu6c/s1600/hideokuze_com_008.jpg"
+}, {
+  "id": "26",
+  "series": "The wind rises",
+  "character": "jiro",
+  "pic": "https://upload.wikimedia.org/wikipedia/en/a/a3/Kaze_Tachinu_poster.jpg"
+}, {
+  "id": "27",
+  "series": "Porco Rosso",
+  "character": "Proco",
+  "pic": "https://upload.wikimedia.org/wikipedia/en/d/d9/Porco_rosso.jpg"
+}, {
+  "id": "28",
+  "series": "nausicaa",
+  "character": "nausicaa",
+  "pic": "https://upload.wikimedia.org/wikipedia/en/b/bc/Nausicaaposter.jpg"
+}, {
+  "id": "29",
+  "series": "The Girl Who Leapt Through Time",
+  "character": "The Girl Who Leapt Through Time",
+  "pic": "https://upload.wikimedia.org/wikipedia/en/4/4e/The_Girl_Who_Leapt_Through_Time_poster.jpg"
+}, {
+  "id": "30",
+  "series": "Ninja Scroll",
+  "character": "Ninja Scroll",
+  "pic": "http://vignette1.wikia.nocookie.net/ninjascroll/images/3/39/Ninja_Scroll_-_Kagero.jpg/revision/latest?cb=20150723194608"
+}, {
+  "id": "31",
+  "series": "The Castle of Cagliostro",
+  "character": "The Castle of Cagliostro",
+  "pic": "http://vignette1.wikia.nocookie.net/lupin/images/4/44/Castle-cagliostro-poster.jpg/revision/latest?cb=20151113031340"
+}, {
+  "id": "32",
+  "series": "Blood: The Last Vampire",
+  "character": "Blood: The Last Vampire",
+  "pic": "http://www.filmtakeout.com/wp-content/uploads/2016/02/blood-the-last-vampire-1.jpg"
+}, {
+  "id": "33",
+  "series": "Vampire Hunter D: Bloodlust",
+  "character": "Vampire Hunter D: Bloodlust",
+  "pic": "https://upload.wikimedia.org/wikipedia/en/4/4b/Vampire-hunter-d-poster.jpg"
+}, {
+  "id": "34",
+  "series": "Wolf Children",
+  "character": "Wolf Children",
+  "pic": "http://t1.gstatic.com/images?q=tbn:ANd9GcRt65AEv8UJCdkb-0is1yAbGHuXZf1MD4NMgbHyilKcyd15P1Tz"
+}, {
+  "id": "35",
+  "series": "Howl's Moving Castle",
+  "character": "Howl's Moving Castle",
+  "pic": "https://img.buzzfeed.com/buzzfeed-static/static/2015-07/15/17/enhanced/webdr13/edit-31132-1436995248-5.jpg"
+}, {
+  "id": "36",
+  "series": "Ghost In The Shell",
+  "character": "motoko",
+  "pic": "http://www.theactionpixel.com/wp-content/uploads/2015/10/gitsthenewmovie_3.jpg"
+}, {
+  "id": "37",
+  "series": "Elfen Lied",
+  "character": "lucy",
+  "pic": "http://vignette3.wikia.nocookie.net/villains/images/3/31/Elfen_Lied_Lucy_by_D_jien.jpg/revision/latest?cb=20130726052703"
+}, {
+  "id": "38",
+  "series": "Full Metal Alchemist Brotherhood",
+  "character": "alphonse",
+  "pic": "http://www.gstatic.com/tv/thumb/tvbanners/9065115/p9065115_b_v8_aa.jpg"
+}, {
+  "id": "39",
+  "series": "Monokie Hime",
+  "character": "monokie",
+  "pic": "http://hivewallpaper.com/wallpaper/2014/11/mononoke-hime-anime-21-desktop-background.jpg"
+}, {
+  "id": "40",
+  "series": "Grave Of The Fire Flies",
+  "character": "Seta",
+  "pic": "http://t0.gstatic.com/images?q=tbn:ANd9GcRMNDBwPmSBW9t9IyC9Xh7Izu_gzmz9_pjalzUcF-tUhmACDPR3"
+}, {
+  "id": "41",
+  "series": "Spirited Away",
+  "character": "z",
+  "pic": "http://t1.gstatic.com/images?q=tbn:ANd9GcS6MveoDoJOg9-wMvtHE4ak_-HDZeYS1egb9PwRcf8lhrtcppMc"
+}, {
+  "id": "42",
+  "series": "Ghost In The Shell SIC",
+  "character": "Hideo Kuze",
+  "pic": "http://4.bp.blogspot.com/-eXMATdehSdY/UCybsOll1BI/AAAAAAAAAGA/QS8Yh80lu6c/s1600/hideokuze_com_008.jpg"
+}, {
+  "id": "43",
+  "series": "The wind rises",
+  "character": "jiro",
+  "pic": "https://upload.wikimedia.org/wikipedia/en/a/a3/Kaze_Tachinu_poster.jpg"
+}, {
+  "id": "44",
+  "series": "Porco Rosso",
+  "character": "Proco",
+  "pic": "https://upload.wikimedia.org/wikipedia/en/d/d9/Porco_rosso.jpg"
+}, {
+  "id": "45",
+  "series": "nausicaa",
+  "character": "nausicaa",
+  "pic": "https://upload.wikimedia.org/wikipedia/en/b/bc/Nausicaaposter.jpg"
+}, {
+  "id": "46",
+  "series": "The Girl Who Leapt Through Time",
+  "character": "The Girl Who Leapt Through Time",
+  "pic": "https://upload.wikimedia.org/wikipedia/en/4/4e/The_Girl_Who_Leapt_Through_Time_poster.jpg"
+}, {
+  "id": "47",
+  "series": "Ninja Scroll",
+  "character": "Ninja Scroll",
+  "pic": "http://vignette1.wikia.nocookie.net/ninjascroll/images/3/39/Ninja_Scroll_-_Kagero.jpg/revision/latest?cb=20150723194608"
+}, {
+  "id": "48",
+  "series": "The Castle of Cagliostro",
+  "character": "The Castle of Cagliostro",
+  "pic": "http://vignette1.wikia.nocookie.net/lupin/images/4/44/Castle-cagliostro-poster.jpg/revision/latest?cb=20151113031340"
+}, {
+  "id": "49",
+  "series": "Blood: The Last Vampire",
+  "character": "Blood: The Last Vampire",
+  "pic": "http://www.filmtakeout.com/wp-content/uploads/2016/02/blood-the-last-vampire-1.jpg"
+}, {
+  "id": "50",
+  "series": "Vampire Hunter D: Bloodlust",
+  "character": "Vampire Hunter D: Bloodlust",
+  "pic": "https://upload.wikimedia.org/wikipedia/en/4/4b/Vampire-hunter-d-poster.jpg"
+}, {
+  "id": "51",
+  "series": "Wolf Children",
+  "character": "Wolf Children",
+  "pic": "http://t1.gstatic.com/images?q=tbn:ANd9GcRt65AEv8UJCdkb-0is1yAbGHuXZf1MD4NMgbHyilKcyd15P1Tz"
+}, {
+  "id": "52",
+  "series": "Howl's Moving Castle",
+  "character": "Howl's Moving Castle",
+  "pic": "https://img.buzzfeed.com/buzzfeed-static/static/2015-07/15/17/enhanced/webdr13/edit-31132-1436995248-5.jpg"
+}, {
+  "id": "53",
+  "series": "Ghost In The Shell",
+  "character": "motoko",
+  "pic": "http://www.theactionpixel.com/wp-content/uploads/2015/10/gitsthenewmovie_3.jpg"
+}, {
+  "id": "54",
+  "series": "Elfen Lied",
+  "character": "lucy",
+  "pic": "http://vignette3.wikia.nocookie.net/villains/images/3/31/Elfen_Lied_Lucy_by_D_jien.jpg/revision/latest?cb=20130726052703"
+}, {
+  "id": "55",
+  "series": "Full Metal Alchemist Brotherhood",
+  "character": "alphonse",
+  "pic": "http://www.gstatic.com/tv/thumb/tvbanners/9065115/p9065115_b_v8_aa.jpg"
+}, {
+  "id": "56",
+  "series": "Monokie Hime",
+  "character": "monokie",
+  "pic": "http://hivewallpaper.com/wallpaper/2014/11/mononoke-hime-anime-21-desktop-background.jpg"
+}, {
+  "id": "57",
+  "series": "Grave Of The Fire Flies",
+  "character": "Seta",
+  "pic": "http://t0.gstatic.com/images?q=tbn:ANd9GcRMNDBwPmSBW9t9IyC9Xh7Izu_gzmz9_pjalzUcF-tUhmACDPR3"
+}, {
+  "id": "58",
+  "series": "Spirited Away",
+  "character": "z",
+  "pic": "http://t1.gstatic.com/images?q=tbn:ANd9GcS6MveoDoJOg9-wMvtHE4ak_-HDZeYS1egb9PwRcf8lhrtcppMc"
+}, {
+  "id": "59",
+  "series": "Ghost In The Shell SIC",
+  "character": "Hideo Kuze",
+  "pic": "http://4.bp.blogspot.com/-eXMATdehSdY/UCybsOll1BI/AAAAAAAAAGA/QS8Yh80lu6c/s1600/hideokuze_com_008.jpg"
+}, {
+  "id": "60",
+  "series": "The wind rises",
+  "character": "jiro",
+  "pic": "https://upload.wikimedia.org/wikipedia/en/a/a3/Kaze_Tachinu_poster.jpg"
+}, {
+  "id": "61",
+  "series": "Porco Rosso",
+  "character": "Proco",
+  "pic": "https://upload.wikimedia.org/wikipedia/en/d/d9/Porco_rosso.jpg"
+}, {
+  "id": "62",
+  "series": "nausicaa",
+  "character": "nausicaa",
+  "pic": "https://upload.wikimedia.org/wikipedia/en/b/bc/Nausicaaposter.jpg"
+}, {
+  "id": "63",
+  "series": "The Girl Who Leapt Through Time",
+  "character": "The Girl Who Leapt Through Time",
+  "pic": "https://upload.wikimedia.org/wikipedia/en/4/4e/The_Girl_Who_Leapt_Through_Time_poster.jpg"
+}, {
+  "id": "64",
+  "series": "Ninja Scroll",
+  "character": "Ninja Scroll",
+  "pic": "http://vignette1.wikia.nocookie.net/ninjascroll/images/3/39/Ninja_Scroll_-_Kagero.jpg/revision/latest?cb=20150723194608"
+}, {
+  "id": "65",
+  "series": "The Castle of Cagliostro",
+  "character": "The Castle of Cagliostro",
+  "pic": "http://vignette1.wikia.nocookie.net/lupin/images/4/44/Castle-cagliostro-poster.jpg/revision/latest?cb=20151113031340"
+}, {
+  "id": "66",
+  "series": "Blood: The Last Vampire",
+  "character": "Blood: The Last Vampire",
+  "pic": "http://www.filmtakeout.com/wp-content/uploads/2016/02/blood-the-last-vampire-1.jpg"
+}, {
+  "id": "67",
+  "series": "Vampire Hunter D: Bloodlust",
+  "character": "Vampire Hunter D: Bloodlust",
+  "pic": "https://upload.wikimedia.org/wikipedia/en/4/4b/Vampire-hunter-d-poster.jpg"
+}, {
+  "id": "68",
+  "series": "Wolf Children",
+  "character": "Wolf Children",
+  "pic": "http://t1.gstatic.com/images?q=tbn:ANd9GcRt65AEv8UJCdkb-0is1yAbGHuXZf1MD4NMgbHyilKcyd15P1Tz"
+}, {
+  "id": "69",
+  "series": "Howl's Moving Castle",
+  "character": "Howl's Moving Castle",
+  "pic": "https://img.buzzfeed.com/buzzfeed-static/static/2015-07/15/17/enhanced/webdr13/edit-31132-1436995248-5.jpg"
 }];
 
 
@@ -110,17 +365,16 @@ app.get('/animeDataSize', function (req, res) {
 app.get('/animeData', function (req, res) {
   var response = [];
   var pageNumber = req.param('pageNumber');
+  console.log('backend hit pageNumber 1:',pageNumber);
   if(pageNumber === undefined){
     pageNumber =1;
   }
-  var b = parseInt(pageNumber) * 4;
-  var a = b - 4;
-  for (var i = a; i <= b; i++) {
-    if (i === data1.length) {
-      break;
-    }
-    response.push(data1[i]);
-  }
+  pageNumber = parseInt(pageNumber);
+  console.log('backend hit pageNumber :',pageNumber);
+  var a = (pageNumber-1)*10;
+  var b = (pageNumber+1)*10;
+  response = data1.slice(a,b);
+  console.log('response :',response);
   res.send(response);
 });
 
