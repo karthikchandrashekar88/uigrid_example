@@ -374,7 +374,6 @@ app.get('/animeData', function (req, res) {
   var a = (pageNumber-1)*10;
   var b = (pageNumber+1)*10;
   response = data1.slice(a,b);
-  console.log('response :',response);
   res.send(response);
 });
 

@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/karthikchandrashekar88/uigrid_example#readme",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "body-parser" : "*"
   }
 }
