@@ -18,6 +18,7 @@
     </style>
     <script type="text/javascript">
         var data;
+        var pagesAlreadyHit = [];
         var app = angular.module("animeApp", ['ui.grid', 'ui.grid.pagination']);
         app.controller("animeCtrl", function ($scope, $http) {
             $scope.animeSeriesGrid = {
@@ -28,7 +29,7 @@
                 rowHeight: 150,
                 columnDefs: [{
                     field: 'id'
-                },{
+                }, {
                     field: 'series'
                 }, {
                     field: 'character'
@@ -42,18 +43,17 @@
                     //will be called on click of a page
                     gridApi.pagination.on.paginationChanged($scope, function (newPage, pageSize) {
                         console.log('clicked on the page');
-                        var clickedPageNumber = parseInt(newPage);
-                        console.log('New Page Number :',clickedPageNumber);
                         //console.log('pageSize :', pageSize);
-                        $scope.getPageData(clickedPageNumber);
+                        $scope.getPageData(newPage);
                     });
                 }
             };
 
             $http.get('/animeData').success(function (res) {
                 console.log('res :', res);
-                data =  res;
-                $scope.animeSeriesGrid.data = res.slice(0,10);
+                pagesAlreadyHit.push(1);
+                data = res;
+                $scope.animeSeriesGrid.data = res.slice(0, 10);
             });
 
             $http.get('/animeDataSize').success(function (res) {
@@ -62,39 +62,37 @@
             });
 
             $scope.getPageData = function (pageNumber) {
-                console.log('Page Number :', pageNumber);
                 pageNumber = parseInt(pageNumber);
-                console.log('actual data :',data);
-                if(pageNumber%2!==0){
-                    $http.get('/animeData?pageNumber=' + pageNumber).success(function (res) {
-                        data =data.concat( res);
-                        console.log('res :', res);
-                        console.log('pageNumber :', pageNumber);
-                        if(pageNumber === undefined){
-                            pageNumber = 1;
-                        }
-                        var a = 10*(pageNumber-1);
-                        var b = 10*pageNumber;
-                        console.log('a :',a);
-                        console.log('b :',b);
-                        var slicedData = data.slice(a,b);
-                        console.log('slicedData :',slicedData);
+                if (pageNumber % 2 !== 0) {
+                    if (pageNumber === undefined) {
+                        pageNumber = 1;
+                    }
+                    if (pagesAlreadyHit.indexOf(pageNumber) === -1) {
+                        $http.get('/animeData?pageNumber=' + pageNumber).success(function (res) {
+                            data = data.concat(res);
+                            var clickedPageNumber = parseInt(pageNumber);
+                            pagesAlreadyHit.push(pageNumber);
+                            var slicedData = $scope.getSlicedData(pageNumber);
+                            $scope.animeSeriesGrid.data = slicedData;
+                        });
+                    }
+                    else{
+                        var slicedData = $scope.getSlicedData(pageNumber);
                         $scope.animeSeriesGrid.data = slicedData;
-                    });
+                    }
                 }
-                else{
-                  var a = 10*(pageNumber-1);
-                  var b = 10*pageNumber;
-                    console.log('a :',a);
-                    console.log('b :',b);
-
-                    var slicedData = data.slice(a,b);
-                    console.log('slicedData :',slicedData);
+                else {
+                    var slicedData = $scope.getSlicedData(pageNumber);
                     $scope.animeSeriesGrid.data = slicedData;
                 }
-                console.log('clicked page number ########### :', pageNumber);
-                console.log('$scope.animeSeriesGrid.totalItems before:', $scope.animeSeriesGrid.totalItems);
             };
+
+            $scope.getSlicedData = function(pageNumber){
+                var a = 10 * (pageNumber - 1);
+                var b = 10 * pageNumber;
+                var slicedData = data.slice(a, b);
+                return slicedData;
+            }
         });
     </script>
 </head>

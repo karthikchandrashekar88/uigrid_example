@@ -365,12 +365,11 @@ app.get('/animeDataSize', function (req, res) {
 app.get('/animeData', function (req, res) {
   var response = [];
   var pageNumber = req.param('pageNumber');
-  console.log('backend hit pageNumber 1:',pageNumber);
   if(pageNumber === undefined){
     pageNumber =1;
   }
   pageNumber = parseInt(pageNumber);
-  console.log('backend hit pageNumber :',pageNumber);
+  console.log('pageNumber :',pageNumber);
   var a = (pageNumber-1)*10;
   var b = (pageNumber+1)*10;
   response = data1.slice(a,b);
