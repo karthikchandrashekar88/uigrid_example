@@ -1,6 +1,9 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
+var util = require('util');
+var MeshMiddleware = require('@smc/mesh_middleware');
+var path = require('path');
 
 //app.use(express.static('public'));
 app.use(express.static(__dirname + "/public"));
@@ -336,21 +339,6 @@ var data1 = [{
   "series": "Blood: The Last Vampire",
   "character": "Blood: The Last Vampire",
   "pic": "http://www.filmtakeout.com/wp-content/uploads/2016/02/blood-the-last-vampire-1.jpg"
-}, {
-  "id": "67",
-  "series": "Vampire Hunter D: Bloodlust",
-  "character": "Vampire Hunter D: Bloodlust",
-  "pic": "https://upload.wikimedia.org/wikipedia/en/4/4b/Vampire-hunter-d-poster.jpg"
-}, {
-  "id": "68",
-  "series": "Wolf Children",
-  "character": "Wolf Children",
-  "pic": "http://t1.gstatic.com/images?q=tbn:ANd9GcRt65AEv8UJCdkb-0is1yAbGHuXZf1MD4NMgbHyilKcyd15P1Tz"
-}, {
-  "id": "69",
-  "series": "Howl's Moving Castle",
-  "character": "Howl's Moving Castle",
-  "pic": "https://img.buzzfeed.com/buzzfeed-static/static/2015-07/15/17/enhanced/webdr13/edit-31132-1436995248-5.jpg"
 }];
 
 
@@ -380,7 +368,7 @@ var server = app.listen(8083, function () {
 
   var host = server.address().address;
   var port = server.address().port;
-
+  MeshMiddleware.call(this, path.join(__dirname, '../'));
   console.log("Example app listening at http://%s:%s", host, port);
 
 });

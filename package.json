@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/karthikchandrashekar88/uigrid_example#readme",
   "dependencies": {
+    "@smc/mesh_middleware": "^1.0.0",
+    "body-parser": "*",
     "express": "^4.14.0",
-    "body-parser" : "*"
+    "util": "^0.10.3"
   }
 }
