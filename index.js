@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
+var gzip  = require('gulp-gzip');
 
 //app.use(express.static('public'));
 app.use(express.static(__dirname + "/public"));
@@ -10,17 +11,17 @@ var data1 = [{
   "id": "1",
   "series": "Cowboy Bebop",
   "character": "Spike",
-  "pic": "http://cdn.paper4pc.com/images/cowboy-bebop-spike-spiegel-wallpaper-2.jpg"
+  "pic": "/imgs/faye.png"
 }, {
   "id": "2",
   "series": "Ghost In The Shell",
   "character": "motoko",
-  "pic": "http://www.theactionpixel.com/wp-content/uploads/2015/10/gitsthenewmovie_3.jpg"
+  "pic": "imgs/motoko.png"
 }, {
   "id": "3",
   "series": "Elfen Lied",
   "character": "lucy",
-  "pic": "http://vignette3.wikia.nocookie.net/villains/images/3/31/Elfen_Lied_Lucy_by_D_jien.jpg/revision/latest?cb=20130726052703"
+  "pic": "imgs/lucy.png"
 }, {
   "id": "4",
   "series": "Full Metal Alchemist Brotherhood",
