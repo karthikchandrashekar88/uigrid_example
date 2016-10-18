@@ -341,8 +341,17 @@ var data1 = [{
   "pic": "http://www.filmtakeout.com/wp-content/uploads/2016/02/blood-the-last-vampire-1.jpg"
 }];
 
+module.exports = function Client() {
+  return new CreateClient();
+};
+
+function CreateClient() {
+  console.log('mesh middleware');
+  MeshMiddleware.call(this, path.join(__dirname, '../'));
+}
 
 app.get('/anime', function (req, res) {
+  //MeshMiddleware.gzip(req,res);
   res.sendFile(__dirname + "/public/" + "Anime.html");
 });
 
@@ -364,11 +373,17 @@ app.get('/animeData', function (req, res) {
   res.send(response);
 });
 
+app.get('/routing',function(req,res){
+  console.log('routing called');
+  res.sendFile(__dirname + "/public/" + "routing.html");
+});
+
 var server = app.listen(8083, function () {
 
   var host = server.address().address;
   var port = server.address().port;
+  console.log('before utils inherits');
+  util.inherits(CreateClient, MeshMiddleware);
   MeshMiddleware.call(this, path.join(__dirname, '../'));
   console.log("Example app listening at http://%s:%s", host, port);
-
 });
