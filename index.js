@@ -2,7 +2,6 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var util = require('util');
-var MeshMiddleware = require('@smc/mesh_middleware');
 var path = require('path');
 
 //app.use(express.static('public'));
@@ -347,7 +346,6 @@ module.exports = function Client() {
 
 function CreateClient() {
   console.log('mesh middleware');
-  MeshMiddleware.call(this, path.join(__dirname, '../'));
 }
 
 app.get('/anime', function (req, res) {
@@ -383,7 +381,5 @@ var server = app.listen(8083, function () {
   var host = server.address().address;
   var port = server.address().port;
   console.log('before utils inherits');
-  util.inherits(CreateClient, MeshMiddleware);
-  MeshMiddleware.call(this, path.join(__dirname, '../'));
   console.log("Example app listening at http://%s:%s", host, port);
 });

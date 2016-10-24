@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
-
+<script src="js/angular.min.js"></script>
+<script src="js/angular-route.js"></script>
+<link rel="stylesheet" href="stylesheets/w3.css">
 <body ng-app="myApp">
-
-<p><a href="#/">Main</a></p>
-
-<a href="#eva">eva</a>
-<a href="#kristen">kristen</a>
+<ul class="w3-navbar w3-black">
+  <li><a href="#eva">eva</a></li>
+  <li><a href="#kristen">kristen</a></li>
+  <li><a href="#searchMovie">Search Movie</a></li>
+</ul>
 
 <div ng-view></div>
 
@@ -20,14 +20,16 @@ app.config(function($routeProvider) {
         templateUrl : "main.htm"
     })
     .when("/eva", {
-        templateUrl : "eva.htm"
+        templateUrl : "html/eva.htm"
     })
     .when("/kristen", {
-        templateUrl : "kristen.htm"
+        templateUrl : "html/kristen.htm"
+    })
+    .when("/searchMovie", {
+        templateUrl : "html/searchMovie.htm"
     })
 });
 </script>
 
-<p>Click on the links to navigate to "red.htm", "green.htm", "blue.htm", or back to "main.htm"</p>
 </body>
 </html>
